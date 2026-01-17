@@ -1,6 +1,6 @@
 {
   "name": "@jef/zap2xml",
-  "version": "3.0.0",
+  "version": "3.0.1",
   "description": "JavaScript implementation of zap2xml",
   "type": "module",
   "exports": {
