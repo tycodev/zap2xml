@@ -88,6 +88,9 @@ export function getConfig() {
         .find((arg) => arg.startsWith("--userAgent="))
         ?.split("=")[1] ||
       UserAgent,
+    webServer: Boolean(process.env["WEB_SERVER"]) ||
+      Boolean(process.argv.find((arg) => arg.startsWith("--webServer"))) ||
+      false,
     outputFile:
       process.env["OUTPUT_FILE"] ||
       process.argv
