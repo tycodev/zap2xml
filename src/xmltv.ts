@@ -175,10 +175,10 @@ export function buildProgramsXml(data: GridApiResponse): string {
 
     //for (const event of sortedEvents) {
     for (let i=0; i<sortedEvents.length; i++) {
-      let event = sortedEvents[i]!;
+      const event = sortedEvents[i]!;
 
       if (i>0) {
-        let pevent = sortedEvents[(i-1)]!;
+        const pevent = sortedEvents[(i-1)]!;
         if (isIdentical(event, pevent)) {
           continue
         }
