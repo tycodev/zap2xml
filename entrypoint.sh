@@ -1,6 +1,7 @@
 #!/bin/sh
 
 if [ -z "$WEB_SERVER" ]; then
+    echo "Starting zap2xml in periodic mode..."
     SLEEP_TIME=${SLEEP_TIME:-21600}
 
     while true; do
@@ -14,5 +15,6 @@ if [ -z "$WEB_SERVER" ]; then
         sleep "$SLEEP_TIME"
     done
 else
+    echo "Starting zap2xml web server..."
     node dist/index.js
 fi
